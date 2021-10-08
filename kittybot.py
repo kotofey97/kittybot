@@ -56,7 +56,7 @@ def main():
                           port=int(PORT),
                           url_path=secret_token)
     updater.bot.set_webhook(
-        'https://yourherokuappname.herokuapp.com/' + secret_token)
+        'https://hellocowboybot.herokuapp.com/' + secret_token)
     # updater.start_polling()
     updater.idle()
 
