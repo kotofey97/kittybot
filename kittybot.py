@@ -14,7 +14,7 @@ logging.basicConfig(
 load_dotenv()
 secret_token = os.getenv('TOKEN')
 URL = 'https://api.thecatapi.com/v1/images/search'
-PORT = int(os.environ.get('PORT', 5000))
+PORT = int(os.environ.get('PORT', 80))
 
 
 def get_new_image():
