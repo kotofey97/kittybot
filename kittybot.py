@@ -14,6 +14,7 @@ logging.basicConfig(
 load_dotenv()
 secret_token = os.getenv('TOKEN')
 URL = 'https://api.thecatapi.com/v1/images/search'
+PORT = int(os.environ.get('PORT', 5000))
 
 
 def get_new_image():
@@ -51,7 +52,12 @@ def main():
     updater.dispatcher.add_handler(CommandHandler('start', wake_up))
     updater.dispatcher.add_handler(CommandHandler('newcat', new_cat))
 
-    updater.start_polling()
+    updater.start_webhook(listen="0.0.0.0",
+                          port=int(PORT),
+                          url_path=secret_token)
+    updater.bot.set_webhook(
+        'https://yourherokuappname.herokuapp.com/' + secret_token)
+    # updater.start_polling()
     updater.idle()
 
 
