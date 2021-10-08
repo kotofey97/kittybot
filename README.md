@@ -13,5 +13,11 @@
 - Установите зависимости из файла requirements.txt 
     - `pip install -r requirements.txt`
 
+
+
+### 
+Ссылка на бота http://t.me/HelloCowboybot
+
+Задеплоен на сервере [Heroku](https://heroku.com/)
 ### Автор
 - [Логинова Ольга](https://github.com/kotofey97) 
